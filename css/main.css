@@ -1,0 +1,99 @@
+:root{
+    --seat-color:#761818;
+    --highlight-color:rgb(175, 197, 238);
+    --booked-color: red;
+    --selected-color:orange;
+}
+
+body {
+    background: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+  
+h1 {
+    text-align: center;
+    text-shadow: 2px 2px rgb(154, 147, 148);
+}
+
+.cinema {
+    width: 600px;
+    margin: 60px auto;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.cell {
+    width: 35px;
+    height: 50px;
+    border-radius: 7px;
+}
+.seat {
+    transition: 1s;
+    background-color: var(--seat-color);
+    cursor: pointer;
+}
+
+.selected {
+    transition: 1s;
+    background-color: var(--selected-color);
+}
+.booked {
+    transition: 1s;
+    background-color: var(--booked-color);
+}
+
+.highlighted{
+    transition: 1s;
+    background-color: var(--highlight-color);
+}
+.seat:hover{
+    background-color: #a62222;
+    border-color: bisque ;
+    border-width: 1px;
+}
+
+.seat.booked:hover {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+.popup {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border-radius: 10px;
+    background-color: orange;
+    padding: 20px;
+    box-shadow: 2px 2px rgba(205, 68, 10, 0.761);
+}
+
+.popup .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.highlightBtn{
+    background:none;
+    border: none;
+    cursor: pointer;
+}
+.highlightBtn:active{
+    box-shadow: rgba(202, 72, 72, 0.8) 0 0 5px ;
+}
+
+.btn-book-seat{
+    border: none;
+    width: 90%;
+    margin: auto;
+    border-radius: 5px;
+}
+
